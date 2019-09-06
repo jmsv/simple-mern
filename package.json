@@ -1,0 +1,23 @@
+{
+  "name": "simple-mern",
+  "version": "0.1.0",
+  "description": "the simplest MERN (MongoDB, Express, React and Node) setup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "start:prod": "node index.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "author": "James Vickery",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.1",
+    "password-generator": "^2.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  }
+}

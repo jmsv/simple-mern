@@ -1,0 +1,51 @@
+.App {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+input[type="text"],
+input[type="submit"] {
+  font-size: 0.9em;
+  padding: 4px 8px;
+}
+
+label {
+  vertical-align: top;
+}
+
+.delete-button {
+  padding-top: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+  opacity: 0.3;
+  visibility: hidden;
+}
+
+li:hover .delete-button {
+  visibility: visible;
+}
+
+.delete-button:hover {
+  opacity: 0.6;
+}
