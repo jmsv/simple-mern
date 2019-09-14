@@ -8,7 +8,7 @@
 
 While there are many MERN starters on the interwebs already, I've struggled to find a 'minimal viable' MERN app. Existing examples usually involve other libraries and tools such as Redux, React Router, Typescript, Docker etc. These are all great things, but add unnecessary complexity when you just want to start simple.
 
-This MERN starter, `simple-mern` (minimum viable MERN) aims to be the minimum you need to get started with the stack.
+This MERN starter, `simple-mern` aims to be the minimum you need to get started with the stack.
 
 ## Getting Started
 
