@@ -1,5 +1,8 @@
-# simple-mern
-the simplest MERN (MongoDB, Express, React and Node) setup
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/14852491/64910580-cc163700-d70f-11e9-99ec-8c49095a8c3b.png" />
+  <br/>
+  the simplest MERN (MongoDB, Express, React and Node) setup
+</p>
 
 ## Why?
 
