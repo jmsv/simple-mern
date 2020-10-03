@@ -33,7 +33,11 @@ The production app will be running at [localhost:5000](http://localhost:5000/).
 
 While this boilerplate was designed to be as minimal as possible, support for other tech could be added *in their own branches*.
 
-Some examples:
+### Current Extensions
+
+> coming soon
+
+### Ideas for Future Extensions
 
 - Docker support with compose file and nginx reverse proxy
 - Multi-user setup with social auth (e.g. Google, Facebook etc. login using Passport)
