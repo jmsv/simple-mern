@@ -46,5 +46,6 @@ While this boilerplate was designed to be as minimal as possible, support for ot
 - [axios](https://github.com/axios/axios) in place of fetch
 - UI frameworks such as [Material-UI](https://github.com/mui-org/material-ui) or [reactstrap](https://github.com/reactstrap/reactstrap)
 - Static site generator using [GatsbyJS](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/)
+- Replace JavaScript with TypeScript
 
 If you'd like to add support for any of the above or something else, please open an [issue](https://github.com/jmsv/simple-mern/issues) letting me know, and I'll create a new branch to base the PR against.
