@@ -1,44 +1,31 @@
 import React, { Component } from 'react';
+const { default: taskService } = require('../services/task.service.js')
 
 export default class TaskList extends Component {
   state = {
     tasks: []
   };
 
-  componentDidMount() {
-    this.getTasks();
+  async componentDidMount() {
+    await this.getTasks();
   }
 
-  getTasks = () => {
-    fetch('/api/tasks')
-      .then(res => res.json())
-      .then(tasks => {
-        this.setState({ tasks });
-      });
+  getTasks = async () => {
+    const tasks =  await taskService.getTasks()
+    this.setState({ tasks });
   };
 
-  clickDeleteTask = (event, task) => {
+  clickDeleteTask = async (event, task) => {
     event.preventDefault();
-
-    fetch(`/api/tasks/delete/${task._id}`, {
-      method: 'delete'
-    })
-      .then(res => res.json())
-      .then(t => {
-        this.getTasks();
-      });
+    await taskService.deleteTask(task._id)
+    return this.getTasks();
   };
 
-  toggleDone = task => {
+   toggleDone = async task => {
     task.done = !task.done;
-
     this.setState({ tasks: this.state.tasks });
-
-    fetch(`/api/tasks/update/${task._id}`, {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ done: task.done })
-    });
+    await  taskService.updateTask(task)
+    return this.getTasks();
   };
 
   render() {
