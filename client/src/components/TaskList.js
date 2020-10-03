@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const { default: taskService } = require('../services/task.service.js')
+import taskService from '../services/task.service.js'
 
 export default class TaskList extends Component {
   state = {
