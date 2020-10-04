@@ -1,0 +1,33 @@
+version: '3'
+
+services: 
+  app:
+    build: 
+      context: ./client
+    container_name: mean_client
+    depends_on:
+      - db
+    ports:
+      - "${REACT_APP_PORT}:80"
+    networks:
+      - mean-net
+
+  db:
+    container_name: mean_db
+    image: mongo
+    ports:
+      - "27017"
+    volumes: 
+      - mongodata:/data/db
+    networks:
+        - mean-net
+
+#Docker Networks
+networks:
+  mean-net:
+    driver: bridge
+
+volumes:
+  mongodata:
+
+  
