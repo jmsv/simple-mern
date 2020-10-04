@@ -4,7 +4,9 @@ services:
   app:
     build: 
       context: ./client
-    container_name: mean_client
+      args: 
+        - REACT_APP_API_URL=${REACT_APP_API_URL}
+    container_name: mean_client    
     depends_on:
       - db
     ports:

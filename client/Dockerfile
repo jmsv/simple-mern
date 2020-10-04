@@ -16,6 +16,10 @@ RUN npm install
 # Get all the code needed to run the app
 COPY . /app/
 
+ARG REACT_APP_API_URL
+
+ENV REACT_APP_API_URL $REACT_APP_API_URL
+
 # build the react app
 RUN npm run build
 
