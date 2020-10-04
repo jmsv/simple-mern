@@ -15,7 +15,8 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mongoose": "^5.7.5",
-    "password-generator": "^2.2.0"
+    "password-generator": "^2.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
