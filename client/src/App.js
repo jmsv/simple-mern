@@ -36,6 +36,7 @@ class App extends Component {
 
         <form onSubmit={this.clickAddTask}>
           <Input
+            className="new-task"
             type="text"
             size="500"
             placeholder="New Task"
