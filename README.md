@@ -35,7 +35,7 @@ While this boilerplate was designed to be as minimal as possible, support for ot
 
 ### Current Extensions
 
-> coming soon
+- [`with-axios`](https://github.com/jmsv/simple-mern/tree/with-axios): `Axios` replacing `fetch` - [@leonlafa](https://github.com/leonlafa)
 
 ### Ideas for Future Extensions
 
@@ -43,7 +43,6 @@ While this boilerplate was designed to be as minimal as possible, support for ot
 - Multi-user setup with social auth (e.g. Google, Facebook etc. login using Passport)
 - [React Router](https://github.com/ReactTraining/react-router) for routing
 - [Redux](https://github.com/reduxjs/redux) (or [Unstated](https://github.com/jamiebuilds/unstated) or something) for state management
-- [axios](https://github.com/axios/axios) in place of fetch
 - UI frameworks such as [Material-UI](https://github.com/mui-org/material-ui) or [reactstrap](https://github.com/reactstrap/reactstrap)
 - Static site generator using [GatsbyJS](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/)
 - Replace JavaScript with TypeScript
