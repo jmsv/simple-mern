@@ -24,8 +24,7 @@ h1 {
   opacity: 0.5;
 }
 
-input[type="text"],
-input[type="submit"] {
+input[type="text"], input[type="submit"] {
   font-size: 0.9em;
   padding: 4px 8px;
 }
@@ -48,4 +47,8 @@ li:hover .delete-button {
 
 .delete-button:hover {
   opacity: 0.6;
+}
+
+button.submit {
+  margin-left: 16px;
 }

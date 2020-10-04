@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Checkbox } from '@material-ui/core';
 export default class TaskList extends Component {
   state = {
     tasks: []
@@ -49,11 +49,10 @@ export default class TaskList extends Component {
         {tasks.map(task => (
           <li key={task._id}>
             <label className={task.done ? 'done' : ''}>
-              <input
-                type="checkbox"
-                checked={task.done}
-                onChange={() => this.toggleDone(task)}
-              />{' '}
+              <Checkbox 
+              inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} 
+              checked={task.done} 
+              onChange={() => this.toggleDone(task)} />
               {task.title}
               <svg
                 onClick={event => this.clickDeleteTask(event, task)}
