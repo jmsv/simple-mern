@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import './App.css';
 
-import TasksList from './components/TaskList';
+import Home from './pages/home/Home.js';
+import About from './pages/about/About.js';
 
 class App extends Component {
   state = {
@@ -32,23 +33,21 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
+          <nav>
+            <ul>
+              <li>
+                <NavLink exact={true} activeClassName='is-active' to='/'>Home</NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName='is-active' to='/about'>About</NavLink>
+              </li>
+            </ul>
+          </nav>
+
           <Switch>
-            <Route exact path="/" >
-              <h1>My Tasks</h1>
-
-              <TasksList ref="tasksList" />
-
-              <form onSubmit={this.clickAddTask}>
-                <input
-                  type="text"
-                  size="30"
-                  placeholder="New Task"
-                  name="newTaskTitle"
-                  value={this.state.newTaskTitle}
-                  onChange={this.handleChange}
-                />
-                <input className="btn-primary" type="submit" value="Add" />
-              </form>
+            <Route exact path="/" component={Home} >
+            </Route>
+            <Route path="/about" component={About} >
             </Route>
           </Switch>
         </Router>
