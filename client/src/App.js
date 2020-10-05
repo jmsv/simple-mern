@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
 import TasksList from './components/TaskList';
+import { Button, Input } from '@material-ui/core';
 
 class App extends Component {
   state = {
@@ -35,15 +35,17 @@ class App extends Component {
         <TasksList ref="tasksList" />
 
         <form onSubmit={this.clickAddTask}>
-          <input
+          <Input
+            className="new-task"
             type="text"
-            size="30"
+            size="500"
             placeholder="New Task"
             name="newTaskTitle"
             value={this.state.newTaskTitle}
             onChange={this.handleChange}
-          />
-          <input className="btn-primary" type="submit" value="Add" />
+            variant="outlined"
+          ></Input>
+          <Button className="submit" variant="contained" color="primary" size="small" type="submit" value="Add">Add</Button>
         </form>
       </div>
     );
