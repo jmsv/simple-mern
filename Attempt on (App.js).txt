@@ -1,0 +1,45 @@
+function App(){
+  const [newTaskTitle, setNewTaskTitle] = useState(' ');
+  const inputRef = useRef(null);
+
+  const handleChange = event => {
+    setNewTaskTitle(event.target.value);
+  };
+
+  const clickAddTask = event => {
+    event.preventDefault();
+
+    const title = {newTaskTitle};
+
+    fetch('/api/tasks/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(title)
+    })
+    .then(() => {
+      setNewTaskTitle('');
+      inputRef.current.getTasks();
+    });
+  };
+
+    return (
+      <div className="App">
+        <h1>My Tasks</h1>
+
+       <TaskList ref={inputRef} /> 
+
+        <form onSubmit={clickAddTask} >
+          <input ref={inputRef}
+            type="text"
+            size="30"
+            placeholder="New Task"
+            name="newTaskTitle"
+            value={newTaskTitle}
+            onChange={handleChange}
+          />
+          <input className="btn-primary" type="submit" value="Add"/>
+        </form>
+      </div>
+   );
+}
+export default App;
