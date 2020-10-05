@@ -9,6 +9,7 @@ services:
     restart: always
     volumes: 
       - './server:/app'
+      - /app/node_modules
     depends_on: 
       - mongo
     container_name: mean_server
