@@ -1,0 +1,52 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: ./server
+      args:
+        - APP_SERVER_PORT=${APP_SERVER_PORT}
+    restart: always
+    volumes: 
+      - './server:/app'
+      - /app/node_modules
+    depends_on: 
+      - mongo
+    container_name: mean_server
+    ports:
+      - "${APP_SERVER_PORT}:${APP_SERVER_PORT}"
+    networks:
+      - mean-net
+
+  app:
+    build:
+      context: ./client
+      args:
+        - REACT_APP_API_URL=${REACT_APP_API_URL}
+    container_name: mean_client
+    ports:
+      - "${REACT_APP_PORT}:80"
+    networks:
+      - mean-net
+
+  mongo:
+    container_name: mean_db
+    image: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=homestead
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=simple-mern
+    volumes:
+      - mongodata:/data/db
+    networks:
+      - mean-net
+    ports: 
+      - 27017:27017
+
+#Docker Networks
+networks:
+  mean-net:
+    driver: bridge
+
+volumes:
+  mongodata:

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import constants from '../constants';
 
+const base_url = constants.API_URL;
 export default class TaskList extends Component {
   state = {
     tasks: []
@@ -10,7 +12,7 @@ export default class TaskList extends Component {
   }
 
   getTasks = () => {
-    fetch('/api/tasks')
+    fetch(`${base_url}/api/tasks`)
       .then(res => res.json())
       .then(tasks => {
         this.setState({ tasks });
@@ -20,7 +22,7 @@ export default class TaskList extends Component {
   clickDeleteTask = (event, task) => {
     event.preventDefault();
 
-    fetch(`/api/tasks/delete/${task._id}`, {
+    fetch(`${base_url}/api/tasks/delete/${task._id}`, {
       method: 'delete'
     })
       .then(res => res.json())
@@ -34,7 +36,7 @@ export default class TaskList extends Component {
 
     this.setState({ tasks: this.state.tasks });
 
-    fetch(`/api/tasks/update/${task._id}`, {
+    fetch(`${base_url}/api/tasks/update/${task._id}`, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ done: task.done })

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import constants from './constants';
 import TasksList from './components/TaskList';
 
+const base_url = constants.API_URL;
 class App extends Component {
   state = {
     newTaskTitle: ''
@@ -17,7 +18,7 @@ class App extends Component {
 
     const title = this.state.newTaskTitle;
 
-    fetch('/api/tasks/add', {
+    fetch(`${base_url}/api/tasks/add`, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title })
