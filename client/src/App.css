@@ -16,7 +16,7 @@ ul {
   list-style: none;
 }
 
-ul>li {
+ul > li {
   display: inline;
 }
 

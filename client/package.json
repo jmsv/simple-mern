@@ -1,11 +1,12 @@
 {
   "name": "simple-mern",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.2"
   },
   "scripts": {

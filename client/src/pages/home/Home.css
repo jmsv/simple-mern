@@ -19,7 +19,8 @@
   opacity: 0.5;
 }
 
-input[type="text"], input[type="submit"] {
+input[type='text'],
+input[type='submit'] {
   font-size: 0.9em;
   padding: 4px 8px;
 }

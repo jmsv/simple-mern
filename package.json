@@ -1,6 +1,6 @@
 {
   "name": "simple-mern",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "the simplest MERN (MongoDB, Express, React and Node) setup",
   "main": "index.js",
   "scripts": {
