@@ -12,9 +12,8 @@ export default {
     try {
       const { data: tasks } = await api.get(service);
       return tasks;
-    }
-    catch (error) {
-      return error
+    } catch (error) {
+      return error;
     }
   },
 
@@ -26,24 +25,31 @@ export default {
   deleteTask: async id => {
     try {
       return api.delete(`${service}/delete/${id}`);
-    }
-    catch (error) {
-      return error
+    } catch (error) {
+      return error;
     }
   },
 
   /**
-      * Update task
-      * @param {Object} task
-      * @returns {Array.<{title: string}>}
-      */
+   * Update task
+   * @param {Object} task
+   * @returns {Array.<{title: string}>}
+   */
   updateTask: async task => {
     try {
-      return api.post(`${service}/update/${task._id}`,
-        { done: task.done });
+      return api.post(`${service}/update/${task._id}`, { done: task.done });
+    } catch (error) {
+      return error;
     }
-    catch (error) {
-      return error
+  },
+
+  addTask: async taskTitle => {
+    try {
+      await api.post(`${service}/add`, {
+        title: taskTitle,
+      });
+    } catch (error) {
+      return error;
     }
-  }
-}
+  },
+};
