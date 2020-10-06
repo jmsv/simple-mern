@@ -31,20 +31,20 @@ The production app will be running at [localhost:5000](http://localhost:5000/).
 
 ## Extend `simple-mern`
 
-While this boilerplate was designed to be as minimal as possible, support for other tech could be added *in their own branches*.
+While this boilerplate was designed to be as minimal as possible, support for other tech could be added _in their own branches_.
 
 ### Current Extensions
 
-- [`with-axios`](https://github.com/jmsv/simple-mern/tree/with-axios): `Axios` replacing `fetch` - [@leonlafa](https://github.com/leonlafa)
+- [`with-axios`](https://github.com/jmsv/simple-mern/tree/with-axios): Replaces Axios with fetch - [@leonlafa](https://github.com/leonlafa)
+- [`with-react-router`](https://github.com/jmsv/simple-mern/tree/with-react-router): Adds React Router - [@leonlafa](https://github.com/leonlafa)
+- [`with-material-ui`](https://github.com/jmsv/simple-mern/tree/with-material-ui): Adds Material UI - [@leonlafa](https://github.com/leonlafa)
+- [`with-docker`](https://github.com/jmsv/simple-mern/tree/with-docker): Adds Docker & Docker Compose - [@alejandrotoga02](https://github.com/alejandrotoga02)
 
 ### Ideas for Future Extensions
 
-- Docker support with compose file and nginx reverse proxy
-- Multi-user setup with social auth (e.g. Google, Facebook etc. login using Passport)
-- [React Router](https://github.com/ReactTraining/react-router) for routing
-- [Redux](https://github.com/reduxjs/redux) (or [Unstated](https://github.com/jamiebuilds/unstated) or something) for state management
-- UI frameworks such as [Material-UI](https://github.com/mui-org/material-ui) or [reactstrap](https://github.com/reactstrap/reactstrap)
-- Static site generator using [GatsbyJS](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/)
 - Replace JavaScript with TypeScript
+- Multi-user setup with social auth (e.g. Google, Facebook etc. login using Passport)
+- [Redux](https://redux.js.org) or [MobX](https://mobx.js.org) global state management for tasks
+- Static site generator using [GatsbyJS](https://www.gatsbyjs.org/) or [Next.js](https://nextjs.org/)
 
 If you'd like to add support for any of the above or something else, please open an [issue](https://github.com/jmsv/simple-mern/issues) letting me know, and I'll create a new branch to base the PR against.
