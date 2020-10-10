@@ -1,18 +1,17 @@
-var mongoose=require("mongoose");
-var Schema=mongoose.Schema;
-var passportLocalMongoose=require("passport-local-mongoose");
-var User=new Schema({
-  username:{   
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
+const User = new Schema({
+  username: {
     type: String,
-    default:' '
+    default: ' ',
   },
-  password:{
+  password: {
     type: String,
-    default:' '
+    default: ' ',
   },
-
 });
-User.plugin(passportLocalMongoose);  //Adding passportLocalMongoose as a plugin which will add support to username and storage of hashed password. 
+User.plugin(passportLocalMongoose); //Adding passportLocalMongoose as a plugin which will add support to username and storage of hashed password.
 
 //Exporting model with User Schema from this module.
-module.exports=mongoose.model("User",User);
+module.exports = mongoose.model('User', User);
