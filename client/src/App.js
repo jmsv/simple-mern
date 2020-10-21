@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
-
+import { connect } from 'react-redux';
+import { tasks } from './redux/actions';
 import TasksList from './components/TaskList';
 
-const App = () => {
-  const [tasks, setTasks] = useState([]);
+const App = ({ allTasks, tasks }) => {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   const getTasks = useCallback(() => {
     fetch('/api/tasks')
       .then(res => res.json())
-      .then(setTasks);
+      .then(tasks);
   });
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const App = () => {
     <div className="App">
       <h1>My Tasks</h1>
 
-      <TasksList tasks={tasks} updateTasks={getTasks} />
+      <TasksList tasks={allTasks} updateTasks={getTasks} />
 
       <form onSubmit={clickAddTask}>
         <input
@@ -50,4 +50,10 @@ const App = () => {
   );
 };
 
-export default App;
+const mapStateToProps = state => (
+  {
+    allTasks: state.allTasks
+  }
+)
+
+export default connect(mapStateToProps, { tasks })(App);
