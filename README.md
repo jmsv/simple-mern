@@ -39,6 +39,7 @@ While this boilerplate was designed to be as minimal as possible, support for ot
 - [`with-react-router`](https://github.com/jmsv/simple-mern/tree/with-react-router): Adds React Router - [@leonlafa](https://github.com/leonlafa)
 - [`with-material-ui`](https://github.com/jmsv/simple-mern/tree/with-material-ui): Adds Material UI - [@leonlafa](https://github.com/leonlafa)
 - [`with-docker`](https://github.com/jmsv/simple-mern/tree/with-docker): Adds Docker & Docker Compose - [@alejandrotoga02](https://github.com/alejandrotoga02)
+- [`with-redux`](https://github.com/jmsv/simple-mern/tree/with-redux): Adds Redux for state management - [@rahulSinha-01](https://github.com/rahulSinha-01)
 
 ### Ideas for Future Extensions
 
