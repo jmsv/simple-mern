@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import './App.css';
 import { connect } from 'react-redux';
+import './App.css';
 import { tasks } from './redux/actions';
 import TasksList from './components/TaskList';
 
@@ -50,10 +50,11 @@ const App = ({ allTasks, tasks }) => {
   );
 };
 
-const mapStateToProps = state => (
-  {
-    allTasks: state.allTasks
-  }
-)
+const mapStateToProps = state => ({
+  allTasks: state.allTasks,
+});
 
-export default connect(mapStateToProps, { tasks })(App);
+export default connect(
+  mapStateToProps,
+  { tasks }
+)(App);
